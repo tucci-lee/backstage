@@ -5,7 +5,7 @@ import 'element-plus/dist/index.css';
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = "http://localhost:9000"; // 开发使用
-// axios.defaults.baseURL = "https://boot.2cci.cn/api/"; // 线上
+// axios.defaults.baseURL = "https://backstage.2cci.cn/api/"; // 线上
 
 /**
  * axios拦截器，错误直接提示

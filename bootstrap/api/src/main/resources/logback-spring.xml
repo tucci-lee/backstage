@@ -2,7 +2,7 @@
 <configuration>
     <property name="console_pattern" value="%highlight([%-5level]) %d{yyyy-MM-dd HH:mm:ss} [%thread] - %cyan(%logger) : %msg%n"/>
     <property name="file_pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] - %logger : %msg%n"/>
-    <property name="log_path" value="logs/boot"/>
+    <property name="log_path" value="logs/backstage"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
