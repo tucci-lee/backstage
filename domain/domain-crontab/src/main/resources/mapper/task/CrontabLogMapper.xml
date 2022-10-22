@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tuccicode.backstage.domain.crontab.mapper.CrontabLogMapper">
+
+    <sql id="ALL">
+        id
+        , crontab_id, status, message, start_time, run_time, create_time
+    </sql>
+
+    <select id="selectPage" resultType="com.tuccicode.backstage.domain.crontab.dataobject.CrontabLogDO">
+        SELECT
+            <include refid="ALL"/>
+        FROM
+            crontab_log
+        WHERE
+            crontab_id = #{q.crontabId}
+        ORDER BY create_time DESC
+    </select>
+</mapper>

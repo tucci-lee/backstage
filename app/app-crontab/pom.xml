@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>app</artifactId>
+        <groupId>com.tuccicode.backstage</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>app-crontab</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tuccicode.backstage</groupId>
+            <artifactId>domain-crontab</artifactId>
+            <version>${version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tuccicode.backstage</groupId>
+            <artifactId>app-core</artifactId>
+            <version>${version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
