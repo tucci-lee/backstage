@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 @Data
 @Accessors(chain = true)
-public class SysUser {
+public class SysUser implements Serializable {
 
     private static final Long ADMIN_UID = 1L;
 
@@ -29,7 +30,7 @@ public class SysUser {
     private Long updateTime;
     private List<Long> roleIds;
 
-    public static String password(String plaintext){
+    public static String password(String plaintext) {
         return BCrypt.hashpw(plaintext, BCrypt.gensalt());
     }
 
@@ -41,7 +42,7 @@ public class SysUser {
         }
     }
 
-    public static boolean isAdmin(Long uid){
+    public static boolean isAdmin(Long uid) {
         return ADMIN_UID.equals(uid);
     }
 }

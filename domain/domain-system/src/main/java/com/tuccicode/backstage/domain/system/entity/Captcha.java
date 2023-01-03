@@ -8,7 +8,7 @@ public class Captcha {
     /**
      * 登录验证码key
      */
-    static final String CAPTCHA_LOGIN_KEY = "captcha:login:";
+    static final String CAPTCHA_LOGIN_KEY = "sys:captcha:login:";
     /**
      * 登录验证码过期时间
      */
